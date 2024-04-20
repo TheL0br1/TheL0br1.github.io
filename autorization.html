@@ -7,8 +7,6 @@
   <link rel="shortcut icon" href="l-initial-letter-with-joystick-shape-free-vector.ico" type="image/x-icon">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <title>Вхід/реєстрація</title>
-  <script src="js/UserLogic.js"></script>
-  <script src="js/cookie.js"></script>
 </head>
 <body style="background-image: url('https://cdn.discordapp.com/attachments/798288758830530573/1027248614369673346/autorization_theme.jpg');">
   <div class="autorizationmenu">
@@ -47,44 +45,5 @@
     </div>
   </div>
 
-  <script language="javascript">
-    var openedHref
-    
-    // document.addEventListener('DOMContentLoaded', function() {
-    //   openedHref = getCookie("openedHref")
-    //   if (openedHref != null) {
-    //       document.getElementsByClassName("selected-stylesheet-block")[0].classList.replace('selected-stylesheet-block', 'unselected-stylesheet-block');
-    //       document.getElementById(openedHref).classList.replace('unselected-stylesheet-block', 'selected-stylesheet-block');
-    //       openedHref = ""
-    //     }
-    // }, false)
-    
-    $("#login-button").on("click", function(){
-        let loginMail = $("#login-name").val().trim()
-        let loginPassword = $("#login-password").val().trim()
-
-        myUser.setUser("Anonymus", loginMail, loginPassword).LogIn()
-    })
-    $("#register-button").on("click", function(){
-        let registerName = $("#register-name").val().trim()
-        let registerMail = $("#register-mail").val().trim()
-        let registerPassword = $("#register-password").val().trim()
-        let registerPassword2 = $("#register-password2").val().trim()
-
-        if (registerPassword == registerPassword2)
-            myUser.setUser(registerName, registerMail, registerPassword).SignIn()
-        else
-            confirm("Паролі не збігаються")
-    })
-
-
-  $(".link").click(function(){
-    var elementId=$(this).attr('href').substring(1);
-    document.getElementsByClassName("selected-stylesheet-block")[0].classList.replace('selected-stylesheet-block', 'unselected-stylesheet-block');
-    document.getElementById(elementId).classList.replace('unselected-stylesheet-block', 'selected-stylesheet-block');
-    openedHref = elementId
-    setCookie("openedHref", openedHref)
-  });
-</script>
 </body>
 </html>

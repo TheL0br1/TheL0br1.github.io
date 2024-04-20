@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="shortcut icon" href="l-initial-letter-with-joystick-shape-free-vector.ico" type="image/x-icon">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Головна</title>
-    <script src="js/timer.js"></script>
+  <link rel="stylesheet" href="css/general_style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="shortcut icon" href="l-initial-letter-with-joystick-shape-free-vector.ico" type="image/x-icon">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Головна</title>
 </head>
 <body>
-  <footer>
+  <footer class="general">
     <p>
       <div id="logodiv"><a href="profile.html" target="_parent"><span style="margin-left: 20%;"><img src="img/logo.jpg" width="80" height="50" alt="Фото"></div></span></a>
       <a href="autorization.html" target="_parent"><button class="button">Увійти/Зареєструватись</button></a>
       <span id="timer">
+        <font size="4" color="red" face="Wingdings">v </font><span id="time">00:00:00</span>
       </span>
     </p>
   </footer>  
@@ -22,7 +24,7 @@
           <a href="#homepage" class="link"><button class="button" onclick="SortById()">Сортувати за датою додавання</button></a>
           <a href="#homepage" class="link"><button class="button" onclick="SortByLikes()">Сортувати за кількістю лайків</button></a>
         </div>
-        <div id="pageLinks">
+        <div id ="menu">
           <ul>
             <li><a href="post1.html">Сторінка з відео</a></li>
             <li><a href="post2.html">Сторінка з фото</a></li>
@@ -32,5 +34,6 @@
       </div>
     </div>
   </div>
+
 </body>
 </html>
