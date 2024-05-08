@@ -6,10 +6,12 @@
     <link rel="shortcut icon" href="l-initial-letter-with-joystick-shape-free-vector.ico" type="image/x-icon">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Профіль користувача</title>
+    <script src="js/timer.js"></script>
+
 </head>
 <body>
 
-  <div class="mode"><img class="btn-toggle" id="image" src="img/light mode.png" width="80px" height="41px"></div>
+  <div class="mode"><img class="btn-toggle" id="image_button" src="img/light_mode.png" width="80px" height="41px"></div>
   <div id = "stylesheet" style="margin: 5% 40% 70px 5%;">
     <img class="back"></img>
     <div class="stylesheet-block" color="white">
@@ -28,7 +30,41 @@
       </span>
     </p>
   </footer>
-</script>
+  <script>
+    var isDarkMode = false;
+    const dark = "img/dark_mode.png"
+    const light= "img/light_mode.png"
+      
+    document.querySelector(".btn-toggle").addEventListener("click", function () {
+    document.body.classList.toggle("Dark-theme");
+    document.querySelector(".general").classList.toggle('Dark-theme');
+    document.querySelector("#logodiv").classList.toggle('Dark-theme');
+    for(var i=0; i<$(".stylesheet-block").length; i++)
+      $(".stylesheet-block")[i].classList.toggle('Dark-theme');
+    for(var i=0; i<$("input[type=submit]").length; i++)
+      $("input[type=submit]")[i].classList.toggle('Dark-theme');
+    for(var i=0; i<$(".filter-button").length; i++)
+      $(".filter-button")[i].classList.toggle('Dark-theme');
+    for(var i=0; i<$("input[type=text]").length; i++)
+      $("input[type=text]")[i].classList.toggle('Dark-theme');
+    for(var i=0; i<$("table#comments").length; i++)
+      $("table#comments")[i].classList.toggle('Dark-theme');
+    var stylesheetblock = $(".stylesheet-block");
+    for(var i=0; i<stylesheetblock.length; i++)
+      stylesheetblock[i].classList.toggle('Dark-theme');
+      
+    if (isDarkMode) {
+      isDarkMode = false
+      document.getElementById("image_button").src = light
+    }
+    else {
+      isDarkMode = true
+      document.getElementById("image_button").src = dark
+    }
+  });
+
+  
+  </script>
 </body>
 </html> 
 
