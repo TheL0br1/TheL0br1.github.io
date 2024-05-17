@@ -10,7 +10,14 @@
 
 </head>
 <body>
-
+  <footer class="general">
+    <p>
+      <div id="logodiv"><a href="index.html" target="_parent"><span style="margin-left: 20%;"><img src="img/logo.jpg" width="80" height="50" alt="Фото"></div></span></a>
+      <span id="timer">
+        <font size="4" color="red" face="Wingdings">v </font><span id="time">00:00:00</span>
+      </span>
+    </p>
+  </footer>
   <div class="mode"><img class="btn-toggle" id="image_button" src="img/light_mode.png" width="80px" height="41px"></div>
   <div id = "stylesheet" style="margin: 5% 40% 70px 5%;">
     <img class="back"></img>
@@ -22,46 +29,38 @@
       <h2>Мої коментарі:</h2>
     </div>
   </div>
-  <footer class="general">
-    <p>
-      <div id="logodiv"><a href="index.html" target="_parent"><span style="margin-left: 20%;"><img src="img/logo.jpg" width="80" height="50" alt="Фото"></div></span></a>
-      <span id="timer">
-        <font size="4" color="red" face="Wingdings">v </font><span id="time">00:00:00</span>
-      </span>
-    </p>
-  </footer>
   <script>
     var isDarkMode = false;
     const dark = "img/dark_mode.png"
     const light= "img/light_mode.png"
       
     document.querySelector(".btn-toggle").addEventListener("click", function () {
-    document.body.classList.toggle("Dark-theme");
-    document.querySelector(".general").classList.toggle('Dark-theme');
-    document.querySelector("#logodiv").classList.toggle('Dark-theme');
-    for(var i=0; i<$(".stylesheet-block").length; i++)
-      $(".stylesheet-block")[i].classList.toggle('Dark-theme');
-    for(var i=0; i<$("input[type=submit]").length; i++)
-      $("input[type=submit]")[i].classList.toggle('Dark-theme');
-    for(var i=0; i<$(".filter-button").length; i++)
-      $(".filter-button")[i].classList.toggle('Dark-theme');
-    for(var i=0; i<$("input[type=text]").length; i++)
-      $("input[type=text]")[i].classList.toggle('Dark-theme');
-    for(var i=0; i<$("table#comments").length; i++)
-      $("table#comments")[i].classList.toggle('Dark-theme');
-    var stylesheetblock = $(".stylesheet-block");
-    for(var i=0; i<stylesheetblock.length; i++)
-      stylesheetblock[i].classList.toggle('Dark-theme');
-      
-    if (isDarkMode) {
-      isDarkMode = false
-      document.getElementById("image_button").src = light
-    }
-    else {
-      isDarkMode = true
-      document.getElementById("image_button").src = dark
-    }
-  });
+      document.body.classList.toggle("Dark-theme");
+      document.querySelector(".general").classList.toggle('Dark-theme');
+      document.querySelector("#logodiv").classList.toggle('Dark-theme');
+      for(var i=0; i<$(".stylesheet-block").length; i++)
+        $(".stylesheet-block")[i].classList.toggle('Dark-theme');
+      for(var i=0; i<$("input[type=submit]").length; i++)
+        $("input[type=submit]")[i].classList.toggle('Dark-theme');
+      for(var i=0; i<$(".filter-button").length; i++)
+        $(".filter-button")[i].classList.toggle('Dark-theme');
+      for(var i=0; i<$("input[type=text]").length; i++)
+        $("input[type=text]")[i].classList.toggle('Dark-theme');
+      for(var i=0; i<$("table#comments").length; i++)
+        $("table#comments")[i].classList.toggle('Dark-theme');
+      var stylesheetblock = $(".stylesheet-block");
+      for(var i=0; i<stylesheetblock.length; i++)
+        stylesheetblock[i].classList.toggle('Dark-theme');
+        
+      if (isDarkMode) {
+        isDarkMode = false
+        document.getElementById("image_button").src = light
+      }
+      else {
+        isDarkMode = true
+        document.getElementById("image_button").src = dark
+      }
+    });
 
   
   </script>
