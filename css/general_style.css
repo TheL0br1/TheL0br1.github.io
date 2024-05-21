@@ -394,4 +394,28 @@ table#comments.Dark-theme {
     margin-left: 20px;
     margin-top: -20px;
 }
- 
+
+.parallax {
+    /* The image used */
+    background-image: url("../img/background.jpg");
+  
+    /* Set a specific height */
+    min-height: 1000px;
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-repeat: repeat;
+  }
+
+
+section {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}

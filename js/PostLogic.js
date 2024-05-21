@@ -37,6 +37,7 @@ class Post {
       var homepage = document.createElement('div')
       homepage.id = "homepage"
       homepage.className = "selected-stylesheet-block"
+
       document.getElementById("stylesheet").append(homepage)
     }
     addLinkedPost(id, name, game, comment) {

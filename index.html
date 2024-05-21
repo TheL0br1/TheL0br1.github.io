@@ -8,28 +8,32 @@
     <title>Головна</title>
     <script src="js/timer.js"></script>
 </head>
-<body>
-  <footer class="general">
-    <p>
-      <div id="logodiv"><a href="profile.html" target="_parent"><span style="margin-left: 20%;"><img src="img/logo.jpg" width="80" height="50" alt="Фото"></div></span></a>
-      <a href="autorization.html" target="_parent"><button class="button">Увійти/Зареєструватись</button></a>
-      <span id="timer">
-        <font size="4" color="red" face="Wingdings">v </font><span id="time">00:00:00</span>
-      </span>
-    </p>
-  </footer>
-  <div class="mode"><img class="btn-toggle" id="image_button" src="img/light_mode.png" width="80px" height="41px"></div>
-  
-  <div id="workspace">
-      <div id="leftblock">
-        <div id="fixedrightmenu">
-          <a href="sender.html" class="link"><button class="button" >Створити пост</button></a>
+<body class = "parallax">
+  <div>
+    <footer class="general">
+      <p>
+        <div id="logodiv"><a href="profile.html" target="_parent"><span style="margin-left: 20%;"><img src="img/logo.jpg" width="80" height="50" alt="Фото"></div></span></a>
+        <a href="autorization.html" target="_parent"><button class="button">Увійти/Зареєструватись</button></a>
+        <span id="timer">
+          <font size="4" color="red" face="Wingdings">v </font><span id="time">00:00:00</span>
+        </span>
+      </p>
+    </footer>
+    <div class="mode"><img class="btn-toggle" id="image_button" src="img/light_mode.png" width="80px" height="41px"></div>
+    
+    <div id="workspace">
+        <div id="leftblock">
+          <div id="fixedrightmenu">
+            <a href="sender.html" class="link"><button class="button" >Створити пост</button></a>
 
+          </div>
         </div>
       </div>
     </div>
   </div>
   <script src="js/PostLogic.js"></script>
+  <script src="js/Parallax.js"></script>
+
   <script>
     var isDarkMode = false;
     const dark = "img/dark_mode.png"
@@ -50,9 +54,6 @@
       $("input[type=text]")[i].classList.toggle('Dark-theme');
     for(var i=0; i<$("table#comments").length; i++)
       $("table#comments")[i].classList.toggle('Dark-theme');
-    var stylesheetblock = $(".stylesheet-block");
-    for(var i=0; i<stylesheetblock.length; i++)
-      stylesheetblock[i].classList.toggle('Dark-theme');
       
     if (isDarkMode) {
       isDarkMode = false
